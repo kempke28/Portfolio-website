@@ -1,0 +1,43 @@
+/*Codepen_mini_cahllenge*/
+
+$bg-primary-color: #112055;
+$bg-primary-lighter-color: lighten($bg-primary-color, 20%);
+$bg-primary-darken-color: darken($bg-primary-color, 20%);
+$bg-secondary-color: #469288;
+$font-color-base: #fff;
+$font-color-second: #000;
+
+.box__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+    }
+    .box-primary,
+    .box-primary-darker,
+    .box-primary-lighter,
+    .box-secondary {
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 4px 3px 19px 0px rgba(0,0,0,0.3);
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    .box-primary {
+        background-color: $bg-primary-color;
+        color: $font-color-base;
+    }
+    .box-primary-lighter {
+        background-color: $bg-primary-lighter-color;
+        color: $font-color-base;
+    }
+    .box-primary-darker {
+        background-color: $bg-primary-darken-color;
+        color: $font-color-base;
+    }
+    .box-secondary {
+        background-color: $bg-secondary-color;
+        color: $font-color-second;
+    }

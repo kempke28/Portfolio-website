@@ -1,0 +1,227 @@
+:root {
+    /*colors*/
+    --link-color: #E9421E;
+    --link-color-hover: #11E011;
+    --link-color-used: #066306;
+    --link-color-acive: #000000;
+    /*font style*/
+    --font-size__header:20px;
+    --font-size__main: 25px;
+    --font-size__p: 18px;
+    --font-size__footer: 25px;
+    --fontw400: 400;
+    --fontw700: 700;
+    --buttons_bg-color: #5AD0F6 ;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-family: "Raleway", sans-serif;
+}
+header {
+    font-size: var(--font-size__header);
+    font-weight: var(--fontw400);
+    line-height: 1.8;
+}
+.page-header {
+    display: flex;
+    width:100%;
+    padding: 30px;
+}
+.page-header__item {
+    flex: 0 1 200px;
+}
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+.navigation-list {
+    list-style-type: none;
+}
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+.logo {
+    height: 120px;
+}
+main {
+    font-size: var(--font-size__main);
+    line-height: 1.5;
+    font-weight: var(--fontw400);
+}
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 35px;
+    border-radius: 70px;
+}
+.main_about {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main_contact {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main_about {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.main_about--title {
+    text-align: center;
+}
+.main_about--content-table {
+    margin: 0 auto;
+}
+.content-table-info {
+    text-align: center;
+}
+.button_CV {
+    text-align: center;
+}
+.main-contact-info {
+    text-align: center;
+}
+main p {
+    font-size: var(--font-size__p);
+    line-height: 1.2;
+    font-weight: var(--fontw400);
+}
+footer {
+    font-size: var(--font-size__footer);
+    line-height: 1.5;
+}
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*link color description*/
+a {
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--link-color-hover);
+}
+a:visited {
+    color: var(--link-color-used);
+}
+a:active {
+    color: var(--link-color-acive);
+}
+.main-form-table {
+    display: block;
+}
+
+/*main buttom form*/
+main button {
+    color: white;
+    background-color: indigo;
+    height: 30px;
+    min-width: 80px;
+    min-height: 20px;
+}
+main button:hover {
+    background-color: lightcoral;
+    opacity: .5;
+}
+.button_CV .button {
+    margin-top: 30px;
+    border: none;
+    display: inline-block;
+    background-color: var(--buttons_bg-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.5s;
+    transition-property: opacity;
+}
+.button_CV .button:hover, .button:focus {
+    cursor: pointer;
+    opacity: .5;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid__item {
+    background-color: lightgray;
+    margin: 0px 20px 20px 20px;
+    /*or use gap here*/
+}
+.grid__item:last-child {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+  }
+  .sun {
+    animation: 4s color-change infinite alternate linear;
+  }
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+  .cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+  }
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+  /*Here start the media query*/
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
