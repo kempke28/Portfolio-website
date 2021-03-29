@@ -38,17 +38,22 @@
                 <p>Add me in skype: <a href="#">andy.kempke</a></p>
                 <p><a href="#">akempkedev@gmail.com</a></p>
             </div>
-            <div>
-                <p>send me mesage, let me hear about you!</p>
-                <form action="post" id="contact-form" class="main-form-table">
-                    <label class="standard-label">Email</label>
-                    <input class="fill-element--table" type="text" type="email" placeholder="@something.com" required>
-                    <label class="standard-label">Telphone</label>
-                    <input class="fill-element--table" type="telephone" placeholder="172984219873">
-                    <label class="standard-label">Message</label>
-                    <input class="fill-element--table" type="text"  maxlength="500" required placeholder="write something nice :> 
+            <div class="main-form">
+                <p>Send me a message, let me hear about you!</p>
+                <form action="action-page" class="main-form-container">
+                    <label class="name-element--table" for="fname">Your name</label>
+                    <input type="text" required placeholder="My name is... ">
+                    
+                    <label class="name-element--table" for="email">Email</label>
+                    <input type="text" required placeholder="@something.com...">
+                    
+                    <label class="name-element--table" for="phone">Telephone</label>
+                    <input type="text" placeholder="172984219873...">
+                    
+                    <label class="name-element--table">Message</label>
+                    <input type="text" maxlength="500" required placeholder="write something nice :)"> 
                 </form>
-                <button type="submit" value="send it flying">Send it flying</button>
+                <input  type="submit" value="send it flying">
             </div>
         </div>
     </main>

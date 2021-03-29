@@ -18,7 +18,7 @@
     --font-size__footer: 25px;
     --fontw400: 400;
     --fontw700: 700;
-    --buttons_bg-color: #5AD0F6 ;
+    --buttons_bg-color: #5AD0F6;
 }
 * {
     -webkit-box-sizing: border-box;
@@ -102,6 +102,35 @@ main {
 }
 .main-contact-info {
     text-align: center;
+}
+.main-form {
+  padding: 15px;
+}
+.name-element--table {
+  display: block;
+  text-align:start;
+  margin-left: 100px;
+}
+input[type=text] select, textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius:10px;
+  margin-bottom: 15px;
+}
+input[type=submit] {
+  background-color: #5AD0F6;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+input[type=submit]:hover {
+  background-color: #8b09db;
+ -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
 }
 main p {
     font-size: var(--font-size__p);
