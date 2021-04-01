@@ -57,9 +57,19 @@ header {
     display: inline-block;
     margin-left: 15px;
 }
-.logo {
-    height: 120px;
+.image-wrapper {
+  flex: 1 auto;
+  flex-direction: row;
 }
+.logo {
+  max-width: 35%;
+  height: auto;
+  min-width: 170px;
+  }
+.page-header__item:last-child {
+  flex: 2;
+  text-align: right;
+  }
 main {
     font-size: var(--font-size__main);
     line-height: 1.5;
@@ -108,8 +118,7 @@ main {
 }
 .name-element--table {
   display: block;
-  text-align:start;
-  margin-left: 100px;
+  text-align:center;
 }
 input[type=text] {
   width: 80%;
@@ -208,10 +217,15 @@ main button:hover {
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5%;
+}
+.projects-title {
+  margin-left: 20px;
 }
 .grid__item {
     background-color: lightgray;
     margin: 0px 20px 20px 20px;
+    padding: 10px;
     /*or use gap here*/
 }
 .grid__item:last-child {
@@ -299,6 +313,12 @@ main button:hover {
             animation: 34s cloud-move-reverse infinite alternate linear;
   }
   /*Here start the media query*/
+
+  @media all and (max-width: 500px) {
+    .grid: {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
 
   @media all and (max-width: 500px) {
     .grid {
