@@ -156,7 +156,7 @@ main button:hover {
 }
 .grid__item {
     background-color: lightgray;
-    margin: 0px 20px 20px 20px;
+    grid-gap: 20px;
     /*or use gap here*/
 }
 .grid__item:last-child {
